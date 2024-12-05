@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import NavBarLink from "../subComponents/navBarLink";
+import NavBarLink from "../subComponents/Navbar/navBarLink";
 import "../index.css"
 
 const Navbar = ({defaultSize , availableSizes , currentSize , setCurrentSize , languagesAndContent , setLang , lang , setSize}) => {
@@ -109,9 +109,9 @@ const Navbar = ({defaultSize , availableSizes , currentSize , setCurrentSize , l
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="absolute bg-blue-950 border-2 border-white p-2 mt-2 rounded shadow-lg">
-                <li className="p-1"><button onClick={()=>{setLang("English")}} className={`text-white hover:underline cursor-pointer ${currentSize["Navbar"]}`}>English</button></li> 
-                <li className="p-1"><button onClick={()=>{setLang("Tamil")}} className={`text-white hover:underline cursor-pointer ${currentSize["Navbar"]}`}>தமிழ்</button></li>
-                <li className="p-1"><button onClick={()=>{setLang("Hindi")}} className={`text-white hover:underline cursor-pointer ${currentSize["Navbar"]}`}>हिंदी</button></li>
+                <li className="p-1"><button onClick={()=>{localStorage.setItem("LANGUAGE","English");setLang("English");}} className={`text-white hover:underline cursor-pointer ${currentSize["Navbar"]}`}>English</button></li> 
+                <li className="p-1"><button onClick={()=>{localStorage.setItem("LANGUAGE","Tamil");setLang("Tamil");}} className={`text-white hover:underline cursor-pointer ${currentSize["Navbar"]}`}>தமிழ்</button></li>
+                <li className="p-1"><button onClick={()=>{localStorage.setItem("LANGUAGE","Hindi");console.log("Im getting executed");setLang("Hindi");}} className={`text-white hover:underline cursor-pointer ${currentSize["Navbar"]}`}>हिंदी</button></li>
               </motion.ul>
             )}
                 </div>

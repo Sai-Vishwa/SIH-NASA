@@ -21,7 +21,11 @@ function HomePage(){
                                     "Header":"தலைப்பு",
                                     "Navbar":["வீடு","எங்களைப் பற்றி","சேவைகள்","கருத்து","அ"]
                                 }};
-    const [lang,setLang] = useState("English")
+    const [lang,setLang] = useState("English");
+    const l = localStorage.getItem("LANGUAGE")
+    if(l!=="English" && l!=="Tamil" && l!=="Hindi"){
+        localStorage.setItem("LANGUAGE","English")
+    }
 
     function setSize(dummy){
         console.log("Im getting triggered")
@@ -34,6 +38,7 @@ function HomePage(){
             languagesAndContent = {languagesAndContent}
             lang = {lang}
             currentSize = {currentSize} 
+            type={"Header"}
             />
             <Navbar 
             defaultSize = {defaultSize}
