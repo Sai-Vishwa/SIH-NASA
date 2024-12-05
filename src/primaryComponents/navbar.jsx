@@ -84,7 +84,7 @@ const Navbar = ({defaultSize , availableSizes , currentSize , setCurrentSize , l
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 
-                className="absolute bg-blue-950 border-2 border-white p-2 mt-2 rounded shadow-lg">
+                className="absolute bg-blue-950 border-2 border-white p-2 mt-2 rounded shadow-lg z-50">
                 <li className="p-1"><NavBarLink text={"Shadows"} route={"/shadows"} size={currentSize["Navbar"]}/></li>
                 <li className="p-1"><NavBarLink text={"Solar irr"} route={"/shadows"} size={currentSize["Navbar"]}/></li>
                 <li className="p-1"><NavBarLink text={"Custom model"} route={"/shadows"} size={currentSize["Navbar"]}/></li>
